@@ -1,0 +1,80 @@
+@import 'variable';
+@import 'mixin';
+
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    text-decoration: none;
+}
+
+body
+{
+    background: map-get($colors, main );
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: map-get($fonter, heading );
+    font-weight: 400;
+    font-size: 15px;
+    color: map-get($colors , texts );
+
+    h1
+    {
+        // margin: 20px 0;
+        font-family: map-get($fonter, para );
+        font-weight: 700;
+        font-size: 30px;
+        
+    }
+    article
+    {
+        display: flex;
+        width: 75%;
+        height: 65%;
+        border-radius: 30px;
+        margin: 20px;
+
+        .sedan
+        {
+            background: map-get($colors, first );
+            // padding: 20px;
+            @include sectionStyle;
+            a
+            {
+                background: map-get($colors , main );
+                color: map-get($colors, first );
+            }
+        }
+
+        .suv
+        {
+            background: map-get($colors, second );
+            // padding: 20px;
+            @include sectionStyle;
+            a
+            {
+                background: map-get($colors , main );
+                color: map-get($colors, second );
+            }
+        }
+
+        .luxury
+        {
+            background: map-get($colors, third );
+            // padding: 20px;
+            @include sectionStyle;
+            a
+            {
+                background: map-get($colors , main );
+                color: map-get($colors, third );
+            }
+        }
+    }
+}
+
+@include queries;
