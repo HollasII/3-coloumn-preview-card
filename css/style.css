@@ -5,129 +5,103 @@
 }
 
 body {
-  background: hsl(0deg, 0%, 95%);
+  padding: 10%;
+  position: relative;
+}
+body footer {
+  position: absolute;
+  bottom: 10px;
+  left: 30%;
+  right: 30%;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+main section {
+  display: grid;
+  grid-gap: 30px;
+  padding: 12%;
+  color: #fff;
+  height: auto;
+  background: #000;
+}
+main section .head {
+  width: 50px;
+  height: 50px;
+}
+main section .head img {
   width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+}
+main section h1 {
+  font-size: 30px;
   font-family: "Lexend Deca", sans-serif;
-  font-weight: 400;
-  font-size: 15px;
+  font-size: 700;
   color: hsla(0deg, 0%, 100%, 0.75);
 }
-body h1 {
+main section p {
+  line-height: 130%;
+  letter-spacing: 1px;
   font-family: "Big Shoulders Display", cursive;
-  font-weight: 700;
-  font-size: 30px;
+  font-weight: 200;
+  color: hsla(0deg, 0%, 100%, 0.75);
 }
-body article {
+main section a {
+  width: 120px;
+  border-radius: 50px;
   display: flex;
-  width: 75%;
-  height: 65%;
-  border-radius: 30px;
-  margin: 20px;
-}
-body article .sedan {
-  background: hsl(31deg, 77%, 52%);
-  display: flex;
-  flex-direction: column;
-}
-body article .sedan div {
-  margin: 20px;
-}
-body article .sedan .top-head {
-  margin: 20px 30px;
-}
-body article .sedan .section-body {
-  margin: 60px 30px 40px;
-}
-body article .sedan .learn {
-  margin: 60px 20px 10px 30px;
-}
-body article .sedan a {
-  padding: 10px 20px;
-  border-radius: 20px;
-}
-body article .sedan a:hover {
-  border: 2px solid hsl(0deg, 0%, 95%);
-  background: none;
-  color: hsl(0deg, 0%, 95%);
-}
-body article .sedan a {
+  align-items: center;
+  justify-content: center;
+  color: hsl(184deg, 100%, 22%);
   background: hsl(0deg, 0%, 95%);
+  padding: 10px 6px;
+  margin-top: 30px;
+  border: 2px solid hsl(0deg, 0%, 95%);
+}
+main .sedan {
+  background: hsl(31deg, 77%, 52%);
+}
+main .sedan a {
   color: hsl(31deg, 77%, 52%);
 }
-body article .suv {
-  background: hsl(184deg, 100%, 22%);
-  display: flex;
-  flex-direction: column;
-}
-body article .suv div {
-  margin: 20px;
-}
-body article .suv .top-head {
-  margin: 20px 30px;
-}
-body article .suv .section-body {
-  margin: 60px 30px 40px;
-}
-body article .suv .learn {
-  margin: 60px 20px 10px 30px;
-}
-body article .suv a {
-  padding: 10px 20px;
-  border-radius: 20px;
-}
-body article .suv a:hover {
-  border: 2px solid hsl(0deg, 0%, 95%);
+main .sedan a:hover {
   background: none;
   color: hsl(0deg, 0%, 95%);
+  cursor: pointer;
 }
-body article .suv a {
-  background: hsl(0deg, 0%, 95%);
+main .suv {
+  background: hsl(184deg, 100%, 22%);
+}
+main .suv a {
   color: hsl(184deg, 100%, 22%);
 }
-body article .luxury {
-  background: hsl(179deg, 100%, 13%);
-  display: flex;
-  flex-direction: column;
-}
-body article .luxury div {
-  margin: 20px;
-}
-body article .luxury .top-head {
-  margin: 20px 30px;
-}
-body article .luxury .section-body {
-  margin: 60px 30px 40px;
-}
-body article .luxury .learn {
-  margin: 60px 20px 10px 30px;
-}
-body article .luxury a {
-  padding: 10px 20px;
-  border-radius: 20px;
-}
-body article .luxury a:hover {
-  border: 2px solid hsl(0deg, 0%, 95%);
+main .suv a:hover {
   background: none;
   color: hsl(0deg, 0%, 95%);
+  cursor: pointer;
 }
-body article .luxury a {
-  background: hsl(0deg, 0%, 95%);
+main .luxury {
+  background: hsl(179deg, 100%, 13%);
+}
+main .luxury a {
   color: hsl(179deg, 100%, 13%);
+}
+main .luxury a:hover {
+  background: none;
+  color: hsl(0deg, 0%, 95%);
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {
-  body {
-    flex-direction: column;
+  main {
+    grid-template-columns: repeat(1, 1fr);
   }
-  body article {
-    flex-direction: column;
-  }
-  body article section {
-    padding: 20px;
+
+  footer {
+    position: absolute;
+    bottom: 1%;
+    left: 0;
+    right: 0;
   }
 }/*# sourceMappingURL=style.css.map */

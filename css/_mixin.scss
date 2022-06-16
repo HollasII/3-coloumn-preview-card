@@ -34,18 +34,17 @@
 
 @mixin queries {
     @media (max-width:600px) {
-        body
+        main
         {
-            flex-direction: column;
-            article
-            {
-                flex-direction: column;
-                
-                section
-                {
-                    padding: 20px;
-                }
-            }
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        footer
+        {
+            position: absolute;
+            bottom: 1%;
+            left: 0;
+            right: 0;
         }
     }
 }

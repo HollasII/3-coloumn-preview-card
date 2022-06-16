@@ -9,72 +9,109 @@
     text-decoration: none;
 }
 
-body
-{
-    background: map-get($colors, main );
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: map-get($fonter, heading );
-    font-weight: 400;
-    font-size: 15px;
-    color: map-get($colors , texts );
 
-    h1
-    {
-        // margin: 20px 0;
-        font-family: map-get($fonter, para );
-        font-weight: 700;
-        font-size: 30px;
+body {
+    padding: 10%;
+
+    position: relative;
+
+    footer {
+        position: absolute;
+        bottom: 10px;
+        left: 30%;
+        right: 30%;
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    section {
+        display: grid;
+        grid-gap: 30px;
+        padding: 12%;
+        color: #fff;
+        height: auto;
+        background: #000;
+
+        .head {
+            width: 50px;
+            height: 50px;
+            img {
+                width: 100%;
+            }
+        }
+
+        h1 {
+            font-size: 30px;
+            font-family: map-get($fonter , heading );
+            font-size: 700;
+            color: map-get($colors , texts );
+
+        }
+
+        p {
+            line-height: 130%;
+            letter-spacing: 1px;
+            font-family: map-get($fonter , para );
+            font-weight: 200;
+            color: map-get($colors , texts );
+        }
+
+        a
+        {
+            width: 120px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: map-get($colors , second);
+            background: map-get($colors , main );
+            padding: 10px 6px;
+            margin-top: 30px;
+            border: 2px solid map-get($colors , main);
+        }
+
         
     }
-    article
+
+    .sedan
+        {
+            background: map-get($colors , first );
+
+            a{
+                color: map-get($colors , first );
+                &:hover{
+                    background: none;
+                    color: map-get($colors , main);
+                    cursor: pointer;
+                }
+            }
+        }
+    .suv
     {
-        display: flex;
-        width: 75%;
-        height: 65%;
-        border-radius: 30px;
-        margin: 20px;
-
-        .sedan
-        {
-            background: map-get($colors, first );
-            // padding: 20px;
-            @include sectionStyle;
-            a
-            {
-                background: map-get($colors , main );
-                color: map-get($colors, first );
+        background: map-get($colors , second);
+        a{
+            color: map-get($colors , second );
+            &:hover{
+                background: none;
+                color: map-get($colors , main);
+                cursor: pointer;
             }
         }
-
-        .suv
-        {
-            background: map-get($colors, second );
-            // padding: 20px;
-            @include sectionStyle;
-            a
-            {
-                background: map-get($colors , main );
-                color: map-get($colors, second );
-            }
-        }
-
-        .luxury
-        {
-            background: map-get($colors, third );
-            // padding: 20px;
-            @include sectionStyle;
-            a
-            {
-                background: map-get($colors , main );
-                color: map-get($colors, third );
+    }
+    .luxury
+    {
+        background: map-get($colors , third );
+        a{
+            color: map-get($colors , third );
+            &:hover{
+                background: none;
+                color: map-get($colors , main);
+                cursor: pointer;
             }
         }
     }
 }
-
 @include queries;
